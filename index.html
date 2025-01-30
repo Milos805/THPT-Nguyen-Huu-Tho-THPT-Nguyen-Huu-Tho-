@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Thông tin trường THPT Nguyễn Hữu Thọ">
+        <title>Trường THPT Nguyễn Hữu Thọ
+        </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        <link rel="shortcut icon" href="./Ảnh/images-fotor-20250121195615.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="reset.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    </head>
+<body>
+    <style>@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        *{
+            padding: 0;
+            margin:0;
+            box-sizing: border-box;
+            font-family: 'Poppins',sans-serif;
+        }
+        #wrapper{
+            width: 100%;
+            height: auto;
+            background-image: url(./Ảnh/hinh-nen-desktop-32.jpg);
+        }
+        #header{
+            width:100%;
+            padding: 0px 70px;
+            /* margin-top: 33px; */
+            display: flex;
+            /* justify-content: space-between; */
+            align-items: center;
+        }
+        
+        #menu{
+            list-style: none;
+            display: flex;
+        }
+        #menu .item{
+            margin: 0px 25px;
+        }
+        
+        #menu .item a{
+            color: #3f3e3e;
+            font-size: larger;
+            text-decoration: none;
+            margin: 0px 20px;
+        }
+        
+        #banner{
+            /* width: 100%; */
+        
+            height: 463px;
+            /* margin-top: 70px; */
+            display: flex;
+            padding: 0px 98px;
+            position: relative;
+        }
+        
+        #banner .box-left,#banner .box-right{
+            width: 50%;
+        }
+        
+        #banner .box-left h2{
+            font-size: 32px;
+            margin-top: 75px;
+            color: black;
+        
+        }
+        
+        #banner .box-left p {
+            color: #171616;
+            font-size: 17px;
+        }
+        
+        #banner .box-left button {
+            width: 191px;
+            height: 40px;
+            margin-top: 41px;
+            background: #020202;
+            font-weight: 100;
+            border: none;
+            outline:none;
+            color:#fff;
+            font-weight: bold;
+            border-radius:20px;
+            transition:0.4s;
+        }
+        
+        #banner .box-left button:hover {
+            background: lightslategray;
+            cursor: pointer;
+        }
+        
+        #banner .box-right{
+            object-fit: cover;
+            padding-left: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #banner .box-right img{
+            margin: 0px 10px;
+            border-radius: 30px;
+            animation: animation 3s infinite linear;
+        }
+        </style>
+    <div id="wrapper">
+        <div id="header">
+                <a href="" class="logo">
+                    <img src="./Ảnh/images-fotor-20250121195615.png" alt="" style="width: 67px; height: auto;">
+                </a>
+            <div id="menu">
+                <div class="item">
+                    <a href="">Giới Thiệu</a>
+                </div>
+                <div class="item">
+                    <a href="">Hoạt động</a>
+                </div>
+            </div>
+        </div>
+        <div id="banner">
+            <div class="box-left">
+                <h2>
+                    <span>
+                        CHÀO MỪNG
+                    </span>
+                </h2>
+                <p>Trong những năm qua, với số lượng sinh viên đông đảo, tập thể giảng viên của trường đã lập nhiều thành tích trong phong trào “Hai không” và công tác giáo dục chính trị, tư tưởng, đạo đức sinh viên. Học mô phỏng các hoạt động thể dục thể thao, học tốt, đền ơn đáp nghĩa, v.v.</p>
+                
+                <p>Với chất lượng học tập tốt thò đây là sự lựa chọn. Thêm vào đó có rất nhiều đánh giá Trường THPT Nguyễn Hữu Thọ là một trường khác chất lượng trong việc giảng dạy. Vì thế đây cũng có thể là một sự lựa chọn thích hợp dành cho bạn. </p>
+                
+                <a href="https://thptnguyenhuutho.hcm.edu.vn/homegd4" target="_blank"><button>Tìm hiểu thêm</button></a>
+            </div>
+            <div class="box-right">
+                <img src="./Ảnh/base64-1719033215512555097617.jpg" alt="" style="width: 560px;height:auto ;">
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+        $('.sub-menu').parent('li').addClass('has-child');
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+        $(window).scroll(function() { 
+        if($(this).scrollTop()){
+        $('header').addClass('sticky');
+        }else{
+        $('header').removeClass('sticky');
+        }
+        });
+        });
+    </script>
+    <main>
+        <span>
+            <h3>1.Giới thiệu sơ lược về trường thpt NHT</h3>
+            <p>Trường Trung học Phổ thông (THPT) Nguyễn Hữu Thọ, tọa lạc tại số 02 Bến Vân Đồn, Phường 13, Quận 4, Thành phố Hồ Chí Minh, được thành lập vào năm 2004. Trải qua 20 năm xây dựng và phát triển, trường đã đào tạo nhiều thế hệ học sinh trưởng thành, góp phần đáng kể vào thành tích chung của ngành giáo dục thành phố. Với tổng diện tích xây dựng gần 11.400 m², trường được trang bị cơ sở vật chất hiện đại, bao gồm 45 phòng học, hội trường đa chức năng, sân thể dục, cây xanh và thảm cỏ. Các phòng học bộ môn được trang bị đầy đủ dụng cụ, máy móc, đáp ứng tốt nhu cầu giảng dạy và học tập.</p>
+        </span>
+        <span>
+            <h3>2.Giới thiệu lịch sử thpt NHT</h3>
+            <p>Trường Nguyễn Hữu Thọ được chính thức thành lập từ năm 1961 trải qua nhiều giai đoạn phát triển với nhiều thế hệ học sinh. Trường Nguyễn Hữu Thọ có bề dày truyền thống gần 50 năm lịch sử, là một trong những lá cờ đầu trong công tác giáo dục tỉnh nhà với tỉ lệ học sinh tốt nghiệp THPT hàng năm rất cao. Những cột mốc quan trọng trong quá trình phát triển trường: - Trường được xây dựng vào năm 1964, ban đầu chỉ có 2 phòng học toạ tại sân vận động Bến Lức, nay là Bệnh viện Bến Lức. - Năm 1966 cơ quan Quân Đội Hoa Kì đã sử dụng 2 phòng học này làm căn cứ, trường buộc phải mượn cơ sở của trường Tiểu học Bến Lức làm địa điểm dạy học. - Năm 1967 trường được xây dựng lại trên diện tích đất 15.000 mét vuông nằm trên quốc lộ 4 nay là Quốc lộ 1A thuộc ấp Vàm, Thị Trấn Bến Lức với tên trường là Trường cấp II - III Bến Lức sau đó tách trường giao cơ sở lại cho trường THCS Nguyễn Trung Trực. Hiện nay vị trí này là siêu thị Coop Mart Bến Lức Đến năm 2000 trường được xây dựng trên diện tích 51.865 mét vuông thuộc ấp Phước Tú, xã Thanh Phú, huyện Bến Lức. Trường nay là trường THPT Nguyễn Hữu Thọ.</p>
+        </span>
+        <span>
+            <h3>3.Giới thiệu về thành tích chung thpt NHT trong 5 năm gần đây</h3>
+            <p>Trường THPT Nguyễn Hữu Thọ, Quận 4, đã đạt được nhiều thành tích đáng chú ý trong 5 năm gần đây: - Đội ngũ giáo viên: 100% giáo viên của trường đều đạt chuẩn và vượt chuẩn, thể hiện sự đầu tư vào chất lượng giảng dạy. - Cơ sở vật chất: Nhà trường đã cải thiện cơ sở vật chất, trang bị đầy đủ dụng cụ và máy móc cho các phòng học bộ môn, đáp ứng tốt nhu cầu giảng dạy và học tập. - Tỷ lệ học sinh tốt nghiệp và đỗ đại học: Tỷ lệ này tăng dần qua từng năm, phản ánh hiệu quả trong công tác giáo dục và đào tạo của nhà trường. - Khen thưởng: Nhân dịp kỷ niệm 20 năm thành lập vào ngày 19/11/2024, trường đã được UBND TPHCM tặng Cờ truyền thống và Liên đoàn Lao động TPHCM trao Cờ thi đua hoàn thành xuất sắc nhiệm vụ Công đoàn năm học 2023 – 2024.</p>
+        </span>
+        <span>
+            <h3>4.Hình ảnh từng mục, 1 video về trường</h3>
+            <img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt=""><img src="" alt="">
+        </span>
+        <span>
+            <h3>5.Thành tích của HS - Công nhân viên nhà trường</h3>
+        </span>
+        <span>
+            <h3>6.Giới thiệu các câu lạc bộ tại trường</h3>
+        </span>
+        <span>
+            <h3>7.Các hoạt động tại trường năm 2021-2022</h3>
+            <p></p>
+            <ul>
+                <li>Thiết kế thiệp chào mừng 20/11</li>
+                <li>Hội khỏe phù đổng - Cuộc thi trang trí mai đào </li>
+                <li>Cuộc thi Rung chuông vàng</li>
+                <li>Tiếng ca học đường </li>
+                <li>Culture Ambassador </li>
+                <li>Flashmob "Sắc màu tuổi trẻ"</li>
+            </ul>
+        </span>
+        <span>
+            <h3>8.Các hoạt động tại trường năm 2022-2023</h3>
+        </span>
+        <span>
+            <h3>9. Các hoạt động tại trường năm 2023-2024</h3>
+            <ul>
+                <li>Hội khỏe Phù Đổng</li>
+                <li>NHT Got Talent</li>
+                <li>Ideal City - Green Lifestyle</li>
+                <li>Hoa điểm 10</li>
+                <li>Cuộc thi tháo lắp súng AK</li>
+                <li>Food Time</li>
+                <li>Hội chợ Xuân</li>
+                <li>Nhảy Flash Mob</li>
+            </ul>
+        </span>
+        <span>
+            <h3>10.Các hoạt động tại trường năm 2024-2025</h3>
+            <p>HĐ tại THPT Nguyẽn Hữu Thọ 2024-2025: </p>
+                <ul>
+                    <li>
+                        Hoạt động quyên góp khắc phục hậu quả bảo số 3 
+                    </li>
+                    <li>Kỉ niệm 20 năm thành lập trường THPT Nguyễn Hữu Thọ </li>
+                    <li>Cuộc thi cắm hoa </li>
+                    <li>Lễ kỉ niệm 42 năm ngày nhà giáo VN 20/11 </li>
+                    <li>Cuộc thi kéo co </li>
+                    <li>Giải TTHS cấp trường </li>
+                    <li>Kì thi KHTN cấp tp 2024-2025</li>
+                    <li>Cuộc thi trang trí mâm quả </li>
+                    <li>Gian hàng ẩm thực </li>
+                    <li>Cuộc thi dịu dàng sắc xuân</li>
+                    <li>Cuộc thi trang trí mai đào </li>
+                    <li>Hoạt động ngoại khóa tại Đ.Lạt </li>
+                    <li>Hoạt động ngoại khóa Cultural life</li>
+                    <li>Lễ kỉ niệm anh hùng liệt sĩ Nguyễn Văn Trỗi hy sinh </li>
+                    <li>Giải chạy S-Race </li>
+                    <li>Phiên tòa giả định </li>
+                    <li>Khai giải năm học 2024-2025 </li>
+                    <li>Ngày hội chào đón hs khối 10</li>
+                    
+                </ul>
+        </span>
+    </main>
+</body>
+</html>
