@@ -12,7 +12,30 @@
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+  
+            /* CSS để ẩn ảnh */
+        .hidden-img {
+            display: none;
+        }
 
+        .visible-img {
+            display: block;
+        }
+
+        /* Thêm chút kiểu dáng cho nút */
+        .toggle-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .toggle-button:hover {
+            background-color: #45a049;
+        }
             * {
                 padding: 0;
                 margin: 0;
@@ -78,9 +101,9 @@
 
             #banner .box-left p {
                 color: #171616;
-                font-size: 20px; /* Tăng kích thước chữ cho đoạn văn */
+                font-size: 30px; /* Tăng kích thước chữ cho đoạn văn */
                 line-height: 1.6;
-                margin-top: 20px;
+                margin-top: 30px;
             }
 
             #banner .box-left button {
@@ -111,7 +134,7 @@
 
             #banner .box-right img {
                 width: 100%;
-                max-width: 500px; /* Giới hạn chiều rộng ảnh */
+                max-width: 300px; /* Giới hạn chiều rộng ảnh */
                 border-radius: 20px;
                 animation: animation 3s infinite linear;
             }
@@ -183,22 +206,49 @@
             <span>
                 <h3>4. Hình ảnh từng mục, 1 video về trường</h3>
                 <ul>
-                    <li><img src="./Ảnh/anh1.jpg" alt="Ảnh 1"></li>
-                    <li><img src="./Ảnh/anh2.jpg" alt="Ảnh 2"></li>
-                    <li><img src="./Ảnh/anh3.jpg" alt="Ảnh 3"></li>
-                    <li><img src="./Ảnh/anh4.jpg" alt="Ảnh 4"></li>
-                    <li><img src="./Ảnh/anh5.jpg" alt="Ảnh 5"></li>
-                    <li><img src="./Ảnh/anh6.jpg" alt="Ảnh 6"></li>
-                    <li><img src="./Ảnh/anh7.jpg" alt="Ảnh 7"></li>
-                    <li><img src="./Ảnh/anh8.jpg" alt="Ảnh 8"></li>
-                    <li><img src="./Ảnh/anh9.jpg" alt="Ảnh 9"></li>
-                    <li><img src="./Ảnh/anh10.jpg" alt="Ảnh 10"></li>
-                    <li><img src="./Ảnh/anh11.jpg" alt="Ảnh 11"></li>
-                    <li><img src="./Ảnh/anh12.jpg" alt="Ảnh 12"></li>
-                    <li><img src="./Ảnh/anh13.jpg" alt="Ảnh 13"></li>
-                    <li><img src="./Ảnh/anh14.jpg" alt="Ảnh 14"></li>
-                    <li><img src="./Ảnh/anh15.jpg" alt="Ảnh 15"></li>
+                    <div class="images-container">
+                    <li><img src="./Ảnh/anh1.jpg" alt="Ảnh 1" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh2.jpg" alt="Ảnh 2" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh3.jpg" alt="Ảnh 3" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh4.jpg" alt="Ảnh 4" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh5.jpg" alt="Ảnh 5" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh6.jpg" alt="Ảnh 6" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh7.jpg" alt="Ảnh 7" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh8.jpg" alt="Ảnh 8" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh9.jpg" alt="Ảnh 9" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh10.jpg" alt="Ảnh 10" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh11.jpg" alt="Ảnh 11" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh12.jpg" alt="Ảnh 12" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh13.jpg" alt="Ảnh 13" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh14.jpg" alt="Ảnh 14" class="hidden-img"></li>
+                    <li><img src="./Ảnh/anh15.jpg" alt="Ảnh 15" class="hidden-img"></li>
+                    </div>
+                    <button class="toggle-button" onclick="toggleImages()">Xem thêm</button>
                 </ul>
+                <script>
+                    // JavaScript để hiển thị hoặc ẩn ảnh
+                    function toggleImages() {
+                        // Lấy tất cả các ảnh có lớp 'hidden-img'
+                        var images = document.querySelectorAll('.hidden-img');
+            
+                        // Duyệt qua từng ảnh và thay đổi hiển thị
+                        images.forEach(function(image) {
+                            if (image.style.display === 'none' || image.style.display === '') {
+                                image.style.display = 'block';  // Hiển thị ảnh
+                            } else {
+                                image.style.display = 'none';  // Ẩn ảnh
+                            }
+                        });
+            
+                        // Thay đổi nội dung của nút tùy thuộc vào trạng thái của ảnh
+                        var button = document.querySelector('.toggle-button');
+                        if (button.innerHTML === 'Xem thêm') {
+                            button.innerHTML = 'Ẩn đi';
+                        } else {
+                            button.innerHTML = 'Xem thêm';
+                        }
+                    }
+                </script>
             </span>
             <span>
                 <h3>5. Giới thiệu các câu lạc bộ tại trường</h3>
