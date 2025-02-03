@@ -10,10 +10,9 @@
         <link rel="stylesheet" type="text/css" href="reset.css">
         <link rel="stylesheet" type="text/css" href="style.css">
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    </head>
-    <body>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
             * {
                 padding: 0;
                 margin: 0;
@@ -25,13 +24,15 @@
                 width: 100%;
                 height: auto;
                 background-image: url(./Ảnh/hinh-nen-desktop-32.jpg);
+                background-size: cover; /* Điều chỉnh để ảnh nền phù hợp */
             }
 
             #header {
                 width: 100%;
-                padding: 0px 70px;
+                padding: 20px 70px; /* Tăng padding để phần đầu trang rộng hơn */
                 display: flex;
                 align-items: center;
+                justify-content: space-between; /* Căn giữa logo và menu */
             }
 
             #menu {
@@ -40,71 +41,91 @@
             }
 
             #menu .item {
-                margin: 0px 25px;
+                margin: 0px 30px;
             }
 
             #menu .item a {
                 color: #3f3e3e;
-                font-size: larger;
+                font-size: 20px; /* Tăng kích thước chữ */
                 text-decoration: none;
                 margin: 0px 20px;
+                transition: color 0.3s;
+            }
+
+            #menu .item a:hover {
+                color: #000; /* Thêm hiệu ứng hover cho các link */
             }
 
             #banner {
-                height: 463px;
+                height: 500px;
                 display: flex;
-                padding: 0px 98px;
+                padding: 50px 80px;
                 position: relative;
+                justify-content: space-between; /* Căn giữa các phần trong banner */
+                align-items: center;
             }
 
-            #banner .box-left, #banner .box-right {
+            #banner .box-left {
                 width: 50%;
             }
 
             #banner .box-left h2 {
-                font-size: 32px;
-                margin-top: 75px;
+                font-size: 40px; /* Tăng kích thước tiêu đề */
+                margin-top: 0;
                 color: black;
+                font-weight: bold;
             }
 
             #banner .box-left p {
                 color: #171616;
-                font-size: 17px;
+                font-size: 20px; /* Tăng kích thước chữ cho đoạn văn */
+                line-height: 1.6;
+                margin-top: 20px;
             }
 
             #banner .box-left button {
-                width: 191px;
-                height: 40px;
-                margin-top: 41px;
+                width: 230px;
+                height: 45px;
+                margin-top: 30px;
                 background: #020202;
-                font-weight: 100;
+                font-weight: 600;
                 border: none;
                 outline: none;
                 color: #fff;
-                font-weight: bold;
-                border-radius: 20px;
-                transition: 0.4s;
+                font-size: 18px;
+                border-radius: 25px;
+                transition: 0.3s;
+                cursor: pointer;
             }
 
             #banner .box-left button:hover {
                 background: lightslategray;
-                cursor: pointer;
             }
 
             #banner .box-right {
-                object-fit: cover;
-                padding-left: 200px;
+                width: 50%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
             }
 
             #banner .box-right img {
-                margin: 0px 10px;
-                border-radius: 30px;
+                width: 100%;
+                max-width: 500px; /* Giới hạn chiều rộng ảnh */
+                border-radius: 20px;
                 animation: animation 3s infinite linear;
             }
+
+            /* Định nghĩa animation nếu cần */
+            @keyframes animation {
+                0% { transform: scale(1); }
+                50% { transform: scale(1.05); }
+                100% { transform: scale(1); }
+            }
+
         </style>
+    </head>
+    <body>
         <div id="wrapper">
             <div id="header">
                 <a href="" class="logo">
@@ -119,6 +140,7 @@
                     </div>
                 </div>
             </div>
+
             <div id="banner">
                 <div class="box-left">
                     <h2>
